@@ -51,7 +51,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          name: ${{ vars.JOB_NAME }} ${{ vars.GITHUB_RUN_ID }}
+          name: ${{ env.GITHUB_JOB }} ${{ env.GITHUB_RUN_ID }}
           path: docs/
       - name: Deploy to GitHub Pages
         id: deployment
